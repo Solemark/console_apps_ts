@@ -9,24 +9,32 @@ const getData = (): number[][] => [
 
 Deno.test("add y to x", () => {
     getData().forEach((item) => {
-        assertEquals(item[0] + item[1], add(item[0], item[1]));
+        const exp = item[0] + item[1];
+        const res = add(item[0], item[1]);
+        assertEquals(exp, res);
     });
 });
 
 Deno.test("subract y from x", () => {
     getData().forEach((item) => {
-        assertEquals(item[0] - item[1], sub(item[0], item[1]));
+        const exp = item[0] - item[1];
+        const res = sub(item[0], item[1]);
+        assertEquals(exp, res);
     });
 });
 
 Deno.test("multiply x by y", () => {
     getData().forEach((item) => {
-        assertEquals(item[0] * item[1], mul(item[0], item[1]));
+        const exp = item[0] * item[1];
+        const res = mul(item[0], item[1]);
+        assertEquals(exp, res);
     });
 });
 
 Deno.test("divide y by x", () => {
     getData().forEach((item) => {
-        assertEquals(item[0] / item[1], div(item[0], item[1]));
+        const exp = item[0] / item[1];
+        const res = div(item[0], item[1]);
+        assertEquals(exp, res);
     });
 });
